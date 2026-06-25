@@ -1,0 +1,18 @@
+{
+  "name": "Triple M\u00f6bius Quadpole",
+  "structure": {
+    "mobius_strips": 3,
+    "roles": [
+      "truth",
+      "shadow",
+      "bridge"
+    ],
+    "quadpole": [
+      "past",
+      "future",
+      "self",
+      "shadow"
+    ],
+    "resolver": "central zero point"
+  }
+}

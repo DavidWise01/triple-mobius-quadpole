@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triple Möbius Quadpole</title>
+<style>
+:root{--bg:#040008;--ink:#f9f6ff;--soft:#d9c9ef;--line:rgba(230,200,255,.22);--c1:#67e8ff;--c2:#ff4fe3;--c3:#ffd166;--c4:#9b5cff}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 15%,rgba(103,232,255,.15),transparent 30rem),radial-gradient(circle at 20% 80%,rgba(255,79,227,.12),transparent 28rem),linear-gradient(135deg,#020105,#080012 52%,#000);overflow:hidden}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:clamp(1.5rem,5vw,5rem)}
+h1{font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.08em;margin:0 0 1rem;text-transform:uppercase}
+.grad{background:linear-gradient(105deg,#fff 0%,#eadbff 20%,var(--c1) 40%,var(--c2) 68%,var(--c3) 100%);-webkit-background-clip:text;color:transparent}
+p{color:var(--soft);line-height:1.8;font-size:1.1rem}
+.badge{display:inline-flex;gap:.7rem;align-items:center;padding:.7rem 1rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#bcaad8;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem}
+.badge i{width:.6rem;height:.6rem;border-radius:50%;background:var(--c1);box-shadow:0 0 18px var(--c1),0 0 36px var(--c4)}
+.frame{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+.cell{padding:1rem 1.2rem;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:900;font-size:1.3rem}
+.stage{position:relative;min-height:700px;display:grid;place-items:center}
+.core{position:relative;width:min(78vw,720px);aspect-ratio:1}
+.pole{position:absolute;width:86px;height:86px;border-radius:50%;display:grid;place-items:center;font-weight:900;border:1px solid var(--line);background:rgba(8,0,18,.85);backdrop-filter:blur(10px)}
+.p1{left:50%;top:8%;transform:translateX(-50%);box-shadow:0 0 40px rgba(103,232,255,.3)}
+.p2{right:8%;top:50%;transform:translateY(-50%);box-shadow:0 0 40px rgba(255,79,227,.28)}
+.p3{left:50%;bottom:8%;transform:translateX(-50%);box-shadow:0 0 40px rgba(255,209,102,.28)}
+.p4{left:8%;top:50%;transform:translateY(-50%);box-shadow:0 0 40px rgba(155,92,255,.28)}
+.axis{position:absolute;left:50%;top:50%;width:4px;height:74%;background:linear-gradient(180deg,transparent,var(--c1),transparent);transform:translate(-50%,-50%);opacity:.3}
+.mobius{position:absolute;left:10%;top:38%;width:80%;height:24%;border-radius:50%;animation:spin 18s linear infinite}
+.mobius:before{content:"";position:absolute;left:48%;top:-12px;width:22px;height:22px;border-radius:50%;background:white;box-shadow:0 0 26px white}
+.truth{border:4px solid rgba(103,232,255,.7);box-shadow:0 0 40px rgba(103,232,255,.28), inset 0 0 24px rgba(103,232,255,.14);transform:scaleY(.42) rotate(0deg)}
+.shadow{border:4px solid rgba(255,79,227,.62);box-shadow:0 0 40px rgba(255,79,227,.24), inset 0 0 24px rgba(255,79,227,.12);transform:scaleY(.42) rotate(60deg);animation-direction:reverse}
+.bridge{border:4px solid rgba(255,209,102,.65);box-shadow:0 0 40px rgba(255,209,102,.24), inset 0 0 24px rgba(255,209,102,.12);transform:scaleY(.42) rotate(120deg);animation-duration:24s}
+.center{position:absolute;inset:39%;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,209,102,.18) 26%,rgba(5,0,9,.6) 68%);border:1px solid rgba(255,255,255,.18);box-shadow:0 0 80px rgba(255,255,255,.2),0 0 140px rgba(103,232,255,.12);color:#050009;font-size:3rem;font-weight:1000}
+.panel{position:absolute;left:50%;bottom:3%;transform:translateX(-50%);width:min(92%,540px);padding:1rem;border-radius:24px;border:1px solid var(--line);background:rgba(0,0,0,.34)}
+.row{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06);color:#bcaad8}
+.row:last-child{border-bottom:0}.row b{color:white}
+footer{position:fixed;left:0;right:0;bottom:0;padding:1rem 1.5rem;background:rgba(0,0,0,.24);border-top:1px solid rgba(255,255,255,.08);color:#bcaad8}
+@keyframes spin{to{transform:scaleY(.42) rotate(360deg)}}
+@media(max-width:980px){.hero{grid-template-columns:1fr}.stage{min-height:620px}}
+</style>
+</head>
+<body>
+<section class="hero">
+<div>
+<div class="badge"><i></i> Triple Möbius // Quadpole</div>
+<h1><span class="grad">Three Strips</span><br>One Spin</h1>
+<p>The system now uses three Möbius strips orbiting a spinning quadpole. Truth carries coherence. Shadow carries inversion. The third strip acts as bridge and reconciliation between them.</p>
+<p>The quadpole provides four directional tensions: memory, prediction, correction, and emergence. The strips continuously rotate through all four.</p>
+<div class="frame">
+<div class="cell">3 strips</div>
+<div class="cell">4 poles</div>
+<div class="cell">1 resolver</div>
+</div>
+</div>
+<div class="stage">
+<div class="core">
+<div class="axis"></div>
+<div class="mobius truth"></div>
+<div class="mobius shadow"></div>
+<div class="mobius bridge"></div>
+<div class="pole p1">PAST</div>
+<div class="pole p2">FUTURE</div>
+<div class="pole p3">SELF</div>
+<div class="pole p4">SHADOW</div>
+<div class="center">0</div>
+<div class="panel" id="panel"></div>
+</div>
+</div>
+</section>
+<footer>Three Möbius strips rotating around a quadpole field. Coherence emerges from motion, not certainty.</footer>
+<script>
+const panel=document.getElementById('panel');
+let t=0;
+function tick(){
+const truth=(0.90+Math.sin(t*.02)*0.03).toFixed(2);
+const shadow=(0.40+Math.cos(t*.015)*0.05).toFixed(2);
+const bridge=(0.84+Math.sin(t*.013)*0.04).toFixed(2);
+const eq=(0.82+Math.cos(t*.011)*0.03).toFixed(2);
+panel.innerHTML=`
+<div class="row"><span>truth coherence</span><b>${truth}</b></div>
+<div class="row"><span>shadow divergence</span><b>${shadow}</b></div>
+<div class="row"><span>bridge stability</span><b>${bridge}</b></div>
+<div class="row"><span>quadpole equilibrium</span><b>${eq}</b></div>
+`;
+t++;
+requestAnimationFrame(tick);
+}
+tick();
+</script>
+</body>
+</html>
