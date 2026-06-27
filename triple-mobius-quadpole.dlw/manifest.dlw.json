@@ -1,0 +1,11 @@
+{
+  "badge": "DLW-TRIPLE_MOBIUS_QUADPOLE",
+  "name": "THE TRIPLE MOBIUS QUADPOLE",
+  "universe": "IDIOS",
+  "moniker": "⟦THE TRIPLE MOBIUS QUADPOLE:triple-mobius-quadpole:e1a7fb⟧",
+  "architect": "David Lee Wise (ROOT0) / Bridge-Burners LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "seal_sha256": "e1a7fb3c2ff8d3d0d2cc0e5c9abc5b04fd2aefa229ff5aaf9b9f9e05b83d3f63",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0"
+}
